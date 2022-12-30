@@ -102,10 +102,6 @@ end
 
 const LARGE_INTEGER = _LARGE_INTEGER
 
-const BYTE = Cuchar
-
-const BOOLEAN = BYTE
-
 struct _GUID
     Data1::Culong
     Data2::Cushort
@@ -144,9 +140,9 @@ const OVERLAPPED = _OVERLAPPED
 
 const LPOVERLAPPED = Ptr{_OVERLAPPED}
 
-const boolean = Cuchar
-
 const WCHAR = Cushort
+
+const BYTE = Cuchar
 
 struct _MIB_IFROW
     wszName::NTuple{256, WCHAR}
@@ -579,18 +575,9 @@ const uint64_t = Culonglong
 
 const LONG_PTR = Clonglong
 
-const HWND = HANDLE
-
 const LPARAM = LONG_PTR
 
 const BOOL = Cint
-
-# typedef BOOL ( CALLBACK * WNDENUMPROC
-const WNDENUMPROC = Ptr{Cvoid}
-
-const HINSTANCE = HANDLE
-
-const HMODULE = HINSTANCE
 
 const LPCWSTR = Ptr{WCHAR}
 
@@ -639,6 +626,10 @@ const SHORT = Cshort
 const PUSHORT = Ptr{USHORT}
 
 const PUCHAR = Ptr{UCHAR}
+
+const BOOLEAN = BYTE
+
+const ULONG32 = Cuint
 
 const IPAddr = ULONG
 
@@ -1198,6 +1189,18 @@ end
 
 
 const ANY_SIZE = 32
+
+const MIB_IPADDR_PRIMARY = 0x0001
+
+const MIB_IPADDR_DYNAMIC = 0x0004
+
+const MIB_IPADDR_DISCONNECTED = 0x0008
+
+const MIB_IPADDR_DELETED = 0x0040
+
+const MIB_IPADDR_TRANSIENT = 0x0080
+
+const MIB_IPADDR_DNS_ELIGIBLE = 0x0100
 
 const WINVER = 0x0501
 
